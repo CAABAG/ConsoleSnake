@@ -1,1 +1,1 @@
-A ConsoleSnake made by me.
+A snake game made in console by me.
