@@ -38,7 +38,7 @@ int main()
             }
             snake.handleInput(input);
             snake.update(points, con::POINTS_X_POS, con::POINTS_Y_POS, apple);
-            Sleep(100);
+            Sleep(70);
         }
         if(!snake.exited())
         {

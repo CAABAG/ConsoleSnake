@@ -5,6 +5,12 @@ UnitClass::UnitClass(const int& x, const int& y, const int& xvel, const int& yve
 {
 }
 
-int UnitClass::getPosX()            { return mPosStruct.posX; }
-int UnitClass::getPosY()            { return mPosStruct.posY; }
-Direction UnitClass::getDirection() { return mPosStruct.dir; }
+int UnitClass::getPosX()                        { return mPosStruct.posX; }
+int UnitClass::getPosY()                        { return mPosStruct.posY; }
+Direction UnitClass::getDirection()             { return mPosStruct.dir; }
+PositionStruct UnitClass::getPositionStruct()   { return mPosStruct; }
+
+void UnitClass::setPositionStruct(PositionStruct pos)
+{
+    mPosStruct = pos;
+}

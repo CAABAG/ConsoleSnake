@@ -13,20 +13,23 @@
 	"appleclass.h"
 	"pointsclass.h"
 
-1560943732 d:\coding projects\c++\mytries\consolesnake\unitclass.h
+1560973734 d:\coding projects\c++\mytries\consolesnake\unitclass.h
 
 1560954020 d:\coding projects\c++\mytries\consolesnake\constants.h
 	"unitclass.h"
 
-1560943732 source:d:\coding projects\c++\mytries\consolesnake\unitclass.cpp
+1560973734 source:d:\coding projects\c++\mytries\consolesnake\unitclass.cpp
 	"unitclass.h"
 
-1560956309 d:\coding projects\c++\mytries\consolesnake\playerclass.h
+1560975658 d:\coding projects\c++\mytries\consolesnake\playerclass.h
+	<list>
+	<vector>
+	<memory>
 	"unitclass.h"
 	"pointsclass.h"
 	"appleclass.h"
 
-1560954741 source:d:\coding projects\c++\mytries\consolesnake\playerclass.cpp
+1560977970 source:d:\coding projects\c++\mytries\consolesnake\playerclass.cpp
 	<iostream>
 	<conio.h>
 	"playerclass.h"

@@ -23,7 +23,11 @@ protected:
     PositionStruct mPosStruct;
 public:
     UnitClass(const int& x, const int& y, const int& xvel, const int& yvel, const Direction& direction);
+
     int getPosX();
     int getPosY();
     Direction getDirection();
+    PositionStruct getPositionStruct();
+
+    void setPositionStruct(PositionStruct pos);
 };
