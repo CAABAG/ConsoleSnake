@@ -1,16 +1,16 @@
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
-X															 X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
+X                                                            X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-↑/w - go up	   ↓/s - go down    ←/a - go left   →/d - go right
+w - go up       s - go down      a - go left      d - go right
