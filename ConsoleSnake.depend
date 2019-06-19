@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1560956248 source:d:\coding projects\c++\mytries\consolesnake\main.cpp
+	<iostream>
+	<fstream>
+	<windows.h>
+	<conio.h>
+	<string>
+	<ctime>
+	<random>
+	"constants.h"
+	"unitclass.h"
+	"playerclass.h"
+	"appleclass.h"
+	"pointsclass.h"
+
+1560943732 d:\coding projects\c++\mytries\consolesnake\unitclass.h
+
+1560954020 d:\coding projects\c++\mytries\consolesnake\constants.h
+	"unitclass.h"
+
+1560943732 source:d:\coding projects\c++\mytries\consolesnake\unitclass.cpp
+	"unitclass.h"
+
+1560956309 d:\coding projects\c++\mytries\consolesnake\playerclass.h
+	"unitclass.h"
+	"pointsclass.h"
+	"appleclass.h"
+
+1560954741 source:d:\coding projects\c++\mytries\consolesnake\playerclass.cpp
+	<iostream>
+	<conio.h>
+	"playerclass.h"
+
+1560950786 d:\coding projects\c++\mytries\consolesnake\appleclass.h
+
+1560954990 source:d:\coding projects\c++\mytries\consolesnake\appleclass.cpp
+	<random>
+	<iostream>
+	"appleclass.h"
+
+1560953702 d:\coding projects\c++\mytries\consolesnake\pointsclass.h
+
+1560954482 source:d:\coding projects\c++\mytries\consolesnake\pointsclass.cpp
+	<iostream>
+	"pointsclass.h"
+
