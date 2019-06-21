@@ -18,6 +18,10 @@ char readCharacter(int x, int y);
 
 int main()
 {
+    char gamePlayed {'T'}; //T for TRUE, F for FALSE
+    while(gamePlayed == 'T')
+    {
+        system("cls");
     if(loadMap(con::PATH_TO_LEVEL))
     {
         setWindow(con::SCREEN_WIDTH, con::SCREEN_HEIGHT);
@@ -30,28 +34,44 @@ int main()
         std::srand((unsigned int)std::time(nullptr));
         AppleClass apple;
         char input {0};
-        while(!snake.died())
-        {
-            if(kbhit())
+            while(!snake.died())
             {
-                input = getch();
+                if(kbhit())
+                {
+                    input = getch();
+                }
+                snake.handleInput(input);
+                if(snake.exited())
+                    gamePlayed = false;
+                snake.update(points, con::POINTS_X_POS, con::POINTS_Y_POS, apple);
+                Sleep(70);
             }
-            snake.handleInput(input);
-            snake.update(points, con::POINTS_X_POS, con::POINTS_Y_POS, apple);
-            Sleep(70);
-        }
-        if(!snake.exited())
-        {
-            system("cls");
-            goTo(con::HALF_THE_WIDTH - 4, con::HALF_THE_HEIGTH);
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),4);
-            std::cout << "GAME OVER";
-            goTo(con::HALF_THE_WIDTH - 4, con::HALF_THE_HEIGTH + 1);
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
-            std::cout << "SCORE: " << points.getPoints();
-            goTo(con::HALF_THE_WIDTH  -10, con::HALF_THE_HEIGTH + 2);
-            std::cout << "Press any key to quit";
-            getch();
+            if(!snake.exited())
+            {
+                system("cls");
+                goTo(con::HALF_THE_WIDTH - 4, con::HALF_THE_HEIGTH);
+                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),4);
+                std::cout << "GAME OVER";
+                goTo(con::HALF_THE_WIDTH - 4, con::HALF_THE_HEIGTH + 1);
+                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
+                std::cout << "SCORE: " << points.getPoints();
+                goTo(con::HALF_THE_WIDTH - 8, con::HALF_THE_HEIGTH + 2);
+                std::cout << "Press R to restart";
+                goTo(con::HALF_THE_WIDTH  -7, con::HALF_THE_HEIGTH + 3);
+                std::cout << "Press Q to quit";
+                gamePlayed = getch();
+                switch(gamePlayed)
+                {
+                case 'q':
+                case 'Q':
+                    gamePlayed = 'F';
+                    break;
+                case 'r':
+                case 'R':
+                    gamePlayed = 'T';
+                    break;
+                }
+            }
         }
     }
     return 0;

@@ -30,9 +30,19 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++1z" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="appleclass.cpp" />
+		<Unit filename="appleclass.h" />
+		<Unit filename="constants.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="playerclass.cpp" />
+		<Unit filename="playerclass.h" />
+		<Unit filename="pointsclass.cpp" />
+		<Unit filename="pointsclass.h" />
+		<Unit filename="unitclass.cpp" />
+		<Unit filename="unitclass.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
