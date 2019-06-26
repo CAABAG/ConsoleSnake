@@ -14,11 +14,12 @@ private:
     bool isDead;
     bool hasExited;
     std::vector<PositionStruct> mPosMemory;
-    //std::vector<std::shared_ptr<UnitClass>> mBitsOfSnake;
     std::vector<UnitClass> mBitsOfSnake;
 public:
     PlayerClass(const int& x, const int& y, const int& xvel, const int& yvel,
                 const Direction& direction, const bool& dead, const bool& exit);
+    ~PlayerClass();
+
     void placeSnake();
     bool died();
     bool exited();

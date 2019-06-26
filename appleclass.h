@@ -12,6 +12,8 @@ private:
     ApplePosStruct mPosStruct;
 public:
     AppleClass();
+
     void update();
+
     int getRandomNumber(int minimum, int maximum);
 };

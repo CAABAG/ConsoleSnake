@@ -10,6 +10,15 @@ PlayerClass::PlayerClass(const int& x, const int& y, const int& xvel, const int&
                         : UnitClass(x, y, xvel, yvel, direction), isDead{dead}, hasExited{exit},
                         mPosMemory {}, mBitsOfSnake {} {}
 
+PlayerClass::~PlayerClass()
+{
+    if(!mBitsOfSnake.empty())
+    {
+        for(unsigned int i = 0; i < mBitsOfSnake.size(); i++)
+            delete &mBitsOfSnake[i];
+    }
+}
+
 void PlayerClass::placeSnake()
 {
     goTo(mPosStruct.posX, mPosStruct.posY);
