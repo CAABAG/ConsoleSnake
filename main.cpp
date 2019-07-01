@@ -22,18 +22,18 @@ int main()
     while(gamePlayed == 'T')
     {
         system("cls");
-    if(loadMap(con::PATH_TO_LEVEL))
-    {
-        setWindow(con::SCREEN_WIDTH, con::SCREEN_HEIGHT);
-        PlayerClass snake(con::HALF_THE_WIDTH, con::HALF_THE_HEIGTH,
-                          con::INITIAL_X_VELOCITY, con::INITIAL_Y_VELOCITY,
-                          con::INITIAL_DIRECTION, con::INITIAL_DEAD_STATUS, con::INITIAL_EXIT_STATUS);
-        PointsClass points(con::INITIAL_POINTS);
-        points.showPoints(con::POINTS_X_POS, con::POINTS_Y_POS);
-        snake.placeSnake();
-        std::srand((unsigned int)std::time(nullptr));
-        AppleClass apple;
-        char input {0};
+        if(loadMap(con::PATH_TO_LEVEL))
+        {
+            setWindow(con::SCREEN_WIDTH, con::SCREEN_HEIGHT);
+            PlayerClass snake(con::HALF_THE_WIDTH, con::HALF_THE_HEIGTH,
+                              con::INITIAL_X_VELOCITY, con::INITIAL_Y_VELOCITY,
+                              con::INITIAL_DIRECTION, con::INITIAL_DEAD_STATUS, con::INITIAL_EXIT_STATUS);
+            PointsClass points(con::INITIAL_POINTS);
+            points.showPoints(con::POINTS_X_POS, con::POINTS_Y_POS);
+            snake.placeSnake();
+            std::srand((unsigned int)std::time(nullptr));
+            AppleClass apple;
+            char input {0};
             while(!snake.died())
             {
                 if(kbhit())
@@ -42,7 +42,7 @@ int main()
                 }
                 snake.handleInput(input);
                 if(snake.exited())
-                    gamePlayed = false;
+                    gamePlayed = 'F';
                 snake.update(points, con::POINTS_X_POS, con::POINTS_Y_POS, apple);
                 Sleep(70);
             }

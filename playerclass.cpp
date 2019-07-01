@@ -90,9 +90,6 @@ void PlayerClass::update(PointsClass& points, const int& x, const int& y, AppleC
                 goTo(mBitsOfSnake[i].getPositionStruct().posX, mBitsOfSnake[i].getPositionStruct().posY);
                 std::cout << " ";
             }
-        }
-        if(!mBitsOfSnake.empty())
-        {
             for(unsigned int i = 0; i < mBitsOfSnake.size(); i++)
             {
                 if(mBitsOfSnake.size() > i)
@@ -100,9 +97,6 @@ void PlayerClass::update(PointsClass& points, const int& x, const int& y, AppleC
                     mBitsOfSnake[i].setPositionStruct(mPosMemory[i]);
                 }
             }
-        }
-        if(mBitsOfSnake.size() > 0)
-        {
             for(unsigned int i = 0; i < mBitsOfSnake.size(); i++)
             {
                 goTo(mBitsOfSnake[i].getPositionStruct().posX, mBitsOfSnake[i].getPositionStruct().posY);
