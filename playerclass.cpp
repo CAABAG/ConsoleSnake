@@ -110,9 +110,7 @@ void PlayerClass::update(PointsClass& points, const int& x, const int& y, AppleC
     case '@':
         points.addPoints();
         points.showPoints(x, y);
-        UnitClass* newUnit = new UnitClass(mPosStruct.posX, mPosStruct.posY,
-                                            mPosStruct.velX, mPosStruct.velY, mPosStruct.dir);
-        mBitsOfSnake.push_back(*newUnit);
+        mBitsOfSnake.emplace_back(mPosStruct.posX, mPosStruct.posY, mPosStruct.velX, mPosStruct.velY, mPosStruct.dir);
         goTo(mPosStruct.posX, mPosStruct.posY);
         std::cout << "O";
         apple.update();
