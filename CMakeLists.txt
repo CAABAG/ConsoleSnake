@@ -1,20 +1,20 @@
-cmake_minimum_required(VERSION "3.16.0")
+cmake_minimum_required(VERSION 3.16.0)
 
-project( ConsoleSnake  CXX )
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set( SRC_LIST
+project(ConsoleSnake)
+
+add_executable(
+ConsoleSnake
 main.cpp
 unitclass.cpp
 playerclass.cpp
 appleclass.cpp
 pointsclass.cpp
+constants.h
+unitclass.h
+playerclass.h
+appleclass.h
+pointsclass.h
 )
-
-include_directories(
-"${PROJECT_BINARY_DIR}"
-)
-
-add_executable( ConsoleSnake ${SRC_LIST} )
-set_property(TARGET ConsoleSnake PROPERTY CXX_STANDARD 11)
-
-target_include_directories(ConsoleSnake PUBLIC "${PROJECT_BINARY_DIR}")
