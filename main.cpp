@@ -64,7 +64,6 @@ int main()
                 {
                 case 'q':
                 case 'Q':
-                    gamePlayed = 'F';
                     break;
                 case 'r':
                 case 'R':
