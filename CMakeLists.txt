@@ -20,5 +20,3 @@ set( HDR_LIST
 
 add_executable( "${PROJECT_NAME}" ${SRC_LIST} ${HDR_LIST} )
 set_property(TARGET ConsoleSnake PROPERTY CXX_STANDARD 11)
-
-#target_include_directories(ConsoleSnake PRIVATE ${PROJECT_BINARY_DIR})
