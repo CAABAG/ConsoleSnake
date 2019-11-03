@@ -72,6 +72,14 @@ int main()
                 }
             }
         }
+        else
+        {
+            std::cout << "Cannot load the level!" << std::endl;
+            std::cout << "Perhaps the \"level.txt\" file is missing?" << std::endl;
+            std::cout << "Press enter to exit...";
+            std::cin.get();
+            break;
+        }
     }
     return 0;
 }
