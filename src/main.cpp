@@ -68,6 +68,7 @@ int main()
                 case 'r':
                 case 'R':
                     gamePlayed = 'T';
+                    snake.ReviveSnake();
                     break;
                 }
             }
@@ -100,6 +101,9 @@ bool loadMap(const char* path)
     }
     else
         success = false;
+
+    levelFile.close();
+
     return success;
 }
 
