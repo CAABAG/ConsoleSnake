@@ -10,7 +10,7 @@ project "Console Snake"
 	location "build/Console Snake"
 	targetdir "build/Console Snake/bin/%{cfg.buildcfg}"
 	
-	files { "**.h", "**.cpp" }
+	files { "src/**.h", "src/**.cpp" }
 	
 	filter "configurations:Debug"
 		defines { "DEBUG" }

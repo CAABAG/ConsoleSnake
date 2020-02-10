@@ -8,7 +8,7 @@ project "Console Snake"
 	language "C++"
 	targetdir "../../bin/%{cfg.buildcfg}"
 	
-	files { "../../**.h", "../../**.cpp" }
+	files { "../../src/**.h", "../../src/**.cpp" }
 	
 	filter "configurations:Debug"
 		defines { "DEBUG" }
