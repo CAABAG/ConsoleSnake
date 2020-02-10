@@ -25,6 +25,4 @@ public:
     bool exited();
     void handleInput(char input);
     void update(PointsClass& points, const int& x, const int& y, AppleClass& apple);
-
-    inline void ReviveSnake() { isDead = true; }
 };

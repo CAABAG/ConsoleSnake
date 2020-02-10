@@ -68,7 +68,6 @@ int main()
                 case 'r':
                 case 'R':
                     gamePlayed = 'T';
-                    snake.ReviveSnake();
                     break;
                 }
             }
