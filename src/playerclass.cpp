@@ -15,7 +15,7 @@ PlayerClass::~PlayerClass()
     if(!mBitsOfSnake.empty())
     {
         for(unsigned int i = 0; i < mBitsOfSnake.size(); i++)
-            delete &mBitsOfSnake[i];
+            mBitsOfSnake.pop_back();
     }
 }
 
